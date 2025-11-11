@@ -1,7 +1,9 @@
+import Lotto from './Components/Lotto/Lotto'
+
 function App() {
 	return (
 		<>
-			<div></div>
+			<Lotto />
 		</>
 	)
 }
