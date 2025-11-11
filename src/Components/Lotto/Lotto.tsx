@@ -2,7 +2,7 @@ import LottoHeader from '../LottoHeader/LottoHeader'
 
 const Lotto = () => {
 	return (
-		<main className='w-full h-screen flex flex-col justify-around items-center'>
+		<main className='w-full h-screen bg-gray-900 flex flex-col items-center'>
 			<LottoHeader />
 		</main>
 	)
