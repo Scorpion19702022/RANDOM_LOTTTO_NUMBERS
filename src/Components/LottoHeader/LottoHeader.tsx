@@ -1,8 +1,9 @@
 const LottoHeader = () => {
 	return (
-		<section className='w-full h-[10%] flex justify-center items-center'>
-			<h1 className='font-sans text-amber-50 md:text-amber-200 lg:text-amber-600'>{`losuj `}</h1>
-			<span></span>
+		<section className='w-[90%] h-[10%] p-12 flex justify-center items-center border-b-4 border-gray-200'>
+			<h1 className='text-[1.2em] text-gray-200 text-center md:text-[1.6em] lg:text-[2.4em]'>
+				{`wylosuj swoje szczęśliwe liczby i wygraj fortunę`.toLocaleUpperCase()}
+			</h1>
 		</section>
 	)
 }
