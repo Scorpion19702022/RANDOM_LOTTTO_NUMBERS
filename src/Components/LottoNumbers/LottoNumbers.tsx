@@ -1,6 +1,6 @@
 const LottoNumbers = () => {
 	return (
-		<section>
+		<section className='w-[90%] h-[30%] flex flex-col justify-between p-6'>
 			<div>
 				<button>{`duży lotek`.toLocaleUpperCase()}</button>
 				<button>{`duży lotek`.toLocaleUpperCase()}</button>
