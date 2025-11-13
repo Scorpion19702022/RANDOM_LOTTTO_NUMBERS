@@ -1,11 +1,11 @@
 const LottoNumbers = () => {
 	return (
 		<section className='w-[90%] h-[30%] flex flex-col justify-around items-center p-6 border-b-2 border-gray-400'>
-			<div className='w-full h-[20%] flex justify-between'>
-				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 hover:bg-gray-950'>
+			<div className='w-full h-[20%] flex justify-between md:w-[50%]'>
+				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-950'>
 					{`duży lotek`.toLocaleUpperCase()}
 				</button>
-				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 hover:bg-gray-950'>
+				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-950'>
 					{`express lotek`.toLocaleUpperCase()}
 				</button>
 			</div>
