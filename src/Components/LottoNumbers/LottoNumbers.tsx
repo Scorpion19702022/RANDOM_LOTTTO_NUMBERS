@@ -13,7 +13,10 @@ const LottoNumbers = () => {
 				</button>
 			</div>
 			<div className='w-full h-[45%] flex justify-center items-center'>
-				<span>1, 2, 3, 4, 5, 6</span>
+				<span>
+					1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2,
+					3, 4, 5, 6, 2, 3, 4, 5, 6
+				</span>
 			</div>
 		</section>
 	)
