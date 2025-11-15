@@ -1,7 +1,7 @@
 const LottoRandomNumbers = () => {
 	return (
-		<section>
-			<h1>{'twoje szczęśliwe liczby'}</h1>
+		<section className='w-[90%] h-[45%] p-[2em] flex flex-col justify-between items-center'>
+			<h1>{'twoje szczęśliwe liczby'.toLocaleUpperCase()}</h1>
 			<div>
 				<button>losuj</button>
 				<button>wyczyść</button>
