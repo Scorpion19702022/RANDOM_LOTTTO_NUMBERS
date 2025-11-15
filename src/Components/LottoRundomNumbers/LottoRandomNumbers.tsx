@@ -4,7 +4,7 @@ const LottoRandomNumbers = () => {
 			<h1 className='w-full pb-2 text-center text-gray-300 border-b-2 border-dotted border-b-gray-500 md:w-[50%] md:text-[1.6em]'>
 				{'twoje szczęśliwe liczby'.toLocaleUpperCase()}
 			</h1>
-			<div className='w-full h-[14%] flex justify-between md:w-[50%]'>
+			<div className='w-full h-[14%] flex justify-between md:w-[50%] lg:h-[20%]'>
 				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'>
 					{`duży lotek`.toLocaleUpperCase()}
 				</button>
