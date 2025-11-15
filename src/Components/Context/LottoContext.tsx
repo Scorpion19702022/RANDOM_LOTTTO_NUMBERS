@@ -17,6 +17,9 @@ const LottoContext = createContext(InitialState)
 export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const [bigLottoNumbers, setBigLottoNumbers] = useState<number[]>([])
 
+	setBigLottoNumbers([1, 2])
+	console.log(bigLottoNumbers)
+
 	return <LottoContext.Provider value={{ bigLottoNumbers }}>{children}</LottoContext.Provider>
 }
 
