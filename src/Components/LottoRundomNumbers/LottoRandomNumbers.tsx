@@ -4,9 +4,13 @@ const LottoRandomNumbers = () => {
 			<h1 className='w-full pb-2 text-center text-gray-300 border-b-2 border-dotted border-b-gray-500 md:w-[50%] md:text-[1.6em]'>
 				{'twoje szczęśliwe liczby'.toLocaleUpperCase()}
 			</h1>
-			<div className='w-full h-[30%] p-12 flex justify-around items-center'>
-				<button>losuj</button>
-				<button>wyczyść</button>
+			<div className='w-full h-[14%] flex justify-between md:w-[50%]'>
+				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'>
+					{`duży lotek`.toLocaleUpperCase()}
+				</button>
+				<button className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'>
+					{`express lotek`.toLocaleUpperCase()}
+				</button>
 			</div>
 			<div className='w-full h-[50%] p-12 flex justify-center items-center'>
 				<span>1, 2, 3, 4, 5, 6, 7</span>
