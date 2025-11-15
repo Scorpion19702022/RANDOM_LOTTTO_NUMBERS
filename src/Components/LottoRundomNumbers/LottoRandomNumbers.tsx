@@ -6,10 +6,10 @@ const LottoRandomNumbers = () => {
 			</h1>
 			<div className='w-full h-[25%] flex justify-between items-center md:w-[50%] md:h-[20%]'>
 				<button className='w-[40%] h-[50%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'>
-					{`duży lotek`.toLocaleUpperCase()}
+					{`losuj`.toLocaleUpperCase()}
 				</button>
 				<button className='w-[40%] h-[50%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'>
-					{`express lotek`.toLocaleUpperCase()}
+					{`wyczyść`.toLocaleUpperCase()}
 				</button>
 			</div>
 			<div className='w-full h-[50%] p-12 flex justify-center items-center'>
