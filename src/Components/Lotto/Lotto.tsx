@@ -1,12 +1,16 @@
+import { useContext } from 'react'
+import LottoContext from '../Context/LottoContext'
 import LottoHeader from '../LottoHeader/LottoHeader'
 import LottoNumbers from '../LottoNumbers/LottoNumbers'
 import LottoRandomNumbers from '../LottoRundomNumbers/LottoRandomNumbers'
 
 const Lotto = () => {
+	const { handleViewNumbers } = useContext(LottoContext)
+
 	return (
 		<main className='w-full h-screen bg-gray-700 flex flex-col items-center relative md:justify-around'>
 			<LottoHeader />
-			<LottoNumbers />
+			<LottoNumbers viewNumbers={handleViewNumbers} />
 			<LottoRandomNumbers />
 		</main>
 	)
