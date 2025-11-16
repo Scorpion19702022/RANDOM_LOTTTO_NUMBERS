@@ -26,7 +26,11 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpress
 			</div>
 			<div className='w-full h-[45%] flex justify-center items-center'>
 				{viewBigLottoNumbers.map((item, index) => {
-					return <span key={index}>{item}</span>
+					return (
+						<span key={index}>
+							{item}, <span className='opacity-0'>,</span>
+						</span>
+					)
 				})}
 				{viewExpressLottoNumbers.map((item, index) => {
 					return <span key={index}>{item}</span>
