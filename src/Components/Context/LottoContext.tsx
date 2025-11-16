@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 type ContextProviderProps = {
 	children: React.ReactNode
@@ -20,7 +21,12 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	// setBigLottoNumbers([1, 2])
 	console.log(bigLottoNumbers)
 
-	return <LottoContext.Provider value={{ bigLottoNumbers }}>{children}</LottoContext.Provider>
+	return (
+		<LottoContext.Provider value={{ bigLottoNumbers }}>
+			{children}
+			<Analytics />
+		</LottoContext.Provider>
+	)
 }
 
 export default LottoContext
