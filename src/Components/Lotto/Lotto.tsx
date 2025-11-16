@@ -5,12 +5,16 @@ import LottoNumbers from '../LottoNumbers/LottoNumbers'
 import LottoRandomNumbers from '../LottoRundomNumbers/LottoRandomNumbers'
 
 const Lotto = () => {
-	const { handleViewNumbers } = useContext(LottoContext)
+	const { bigLottoNumbers, expressLottoNumbers, handleViewNumbers } = useContext(LottoContext)
 
 	return (
 		<main className='w-full h-screen bg-gray-700 flex flex-col items-center relative md:justify-around'>
 			<LottoHeader />
-			<LottoNumbers viewNumbers={handleViewNumbers} />
+			<LottoNumbers
+				viewBigLottoNumbers={bigLottoNumbers}
+				viewExpressLottoNumbers={expressLottoNumbers}
+				viewNumbers={handleViewNumbers}
+			/>
 			<LottoRandomNumbers />
 		</main>
 	)
