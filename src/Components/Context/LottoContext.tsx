@@ -25,7 +25,13 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const handleViewNumbers = (kind: string) => {
 		if (kind === 'bigLotto') {
-			setBigLottoNumbers([49])
+			const bigLotto: number[] = []
+
+			for (let i = 0; i < 49; i++) {
+				bigLotto.push(i)
+			}
+
+			setBigLottoNumbers(bigLotto)
 			setExpressLottoNumbers([])
 		}
 
