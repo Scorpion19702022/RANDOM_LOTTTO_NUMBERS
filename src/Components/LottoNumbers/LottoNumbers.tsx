@@ -1,8 +1,10 @@
 interface InitialProps {
+	viewBigLottoNumbers: number[]
+	viewExpressLottoNumbers: number[]
 	viewNumbers: (kind: string) => void
 }
 
-const LottoNumbers: React.FC<InitialProps> = ({ viewNumbers }) => {
+const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpressLottoNumbers, viewNumbers }) => {
 	return (
 		<section className='w-[90%] h-[35%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
 			<h2 className='w-full h-[30%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
@@ -23,10 +25,12 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewNumbers }) => {
 				</button>
 			</div>
 			<div className='w-full h-[45%] flex justify-center items-center'>
-				<span className='w-full text-gray-400 text-center'>
-					1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2,
-					3, 4, 5, 6, 2, 3, 4, 5, 6
-				</span>
+				{viewBigLottoNumbers.map((item, index) => {
+					return <span key={index}>{item}</span>
+				})}
+				{viewExpressLottoNumbers.map((item, index) => {
+					return <span key={index}>{item}</span>
+				})}
 			</div>
 		</section>
 	)
