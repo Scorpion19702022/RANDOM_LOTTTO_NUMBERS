@@ -36,8 +36,14 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		}
 
 		if (kind === 'expressLotto') {
+			const expressLotto: number[] = []
+
+			for (let i = 0; i < 45; i++) {
+				expressLotto.push(i)
+			}
+
 			setBigLottoNumbers([])
-			setExpressLottoNumbers([45])
+			setExpressLottoNumbers(expressLotto)
 		}
 	}
 
