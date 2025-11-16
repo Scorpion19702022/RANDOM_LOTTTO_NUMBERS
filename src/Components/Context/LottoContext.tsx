@@ -24,8 +24,19 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const [expressLottoNumbers, setExpressLottoNumbers] = useState<number[]>([])
 
 	const handleViewNumbers = (kind: string) => {
-		console.log(kind)
+		if (kind === 'bigLotto') {
+			setBigLottoNumbers([49])
+			setExpressLottoNumbers([])
+		}
+
+		if (kind === 'expressLotto') {
+			setBigLottoNumbers([])
+			setExpressLottoNumbers([45])
+		}
 	}
+
+	console.log(bigLottoNumbers)
+	console.log(expressLottoNumbers)
 
 	return (
 		<LottoContext.Provider value={{ bigLottoNumbers, expressLottoNumbers, handleViewNumbers }}>
