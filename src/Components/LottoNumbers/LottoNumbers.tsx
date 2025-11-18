@@ -6,7 +6,7 @@ interface InitialProps {
 
 const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpressLottoNumbers, viewNumbers }) => {
 	return (
-		<section className='w-[90%] h-[48%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
+		<section className='w-[90%] h-[55%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
 			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
 				wybierz losowanie klikając w odpowiedni przycisk i odkryj cyfry
 			</h2>

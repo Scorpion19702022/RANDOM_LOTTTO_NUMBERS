@@ -47,9 +47,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		}
 	}
 
-	console.log(bigLottoNumbers)
-	console.log(expressLottoNumbers)
-
 	return (
 		<LottoContext.Provider value={{ bigLottoNumbers, expressLottoNumbers, handleViewNumbers }}>
 			{children}
