@@ -1,6 +1,6 @@
 const LottoRandomNumbers = () => {
 	return (
-		<section className='w-[90%] h-[45%] p-[2em] flex flex-col justify-around items-center md:justify-between md:pb-24'>
+		<section className='w-[90%] h-[40%] p-[2em] flex flex-col justify-around items-center md:justify-between md:pb-24'>
 			<h1 className='w-full pb-2 text-center text-gray-300 border-b-2 border-dotted border-b-gray-500 md:w-[50%] md:text-[1.6em]'>
 				{'twoje szczęśliwe liczby'.toLocaleUpperCase()}
 			</h1>
