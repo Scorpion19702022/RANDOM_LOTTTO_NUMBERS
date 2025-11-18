@@ -7,7 +7,7 @@ interface InitialProps {
 const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpressLottoNumbers, viewNumbers }) => {
 	return (
 		<section className='w-[90%] h-[35%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
-			<h2 className='w-full h-[30%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
+			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
 				wybierz losowanie klikając w odpowiedni przycisk i odkryj cyfry
 			</h2>
 			<div className='w-full h-[17%] flex justify-between md:w-[50%]'>
@@ -24,7 +24,7 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpress
 					{`express lotek`.toLocaleUpperCase()}
 				</button>
 			</div>
-			<div className='w-full h-[45%] flex justify-center items-center'>
+			<div className='w-full h-[55%] flex flex-wrap justify-center items-center'>
 				{viewBigLottoNumbers.map((item, index) => {
 					return (
 						<span key={index}>
