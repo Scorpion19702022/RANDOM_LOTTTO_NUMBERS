@@ -6,11 +6,11 @@ interface InitialProps {
 
 const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpressLottoNumbers, viewNumbers }) => {
 	return (
-		<section className='w-[90%] h-[35%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
+		<section className='w-[90%] h-[48%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400'>
 			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
 				wybierz losowanie klikając w odpowiedni przycisk i odkryj cyfry
 			</h2>
-			<div className='w-full h-[17%] flex justify-between md:w-[50%]'>
+			<div className='w-full h-[17%] mb-4 flex justify-between md:w-[50%]'>
 				<button
 					onClick={() => viewNumbers('bigLotto')}
 					className='w-[40%] border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
@@ -27,14 +27,14 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpress
 			<div className='w-full h-[55%] flex flex-wrap justify-center items-center'>
 				{viewBigLottoNumbers.map((item, index) => {
 					return (
-						<span key={index}>
+						<span className='text-gray-400' key={index}>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
 				{viewExpressLottoNumbers.map((item, index) => {
 					return (
-						<span key={index}>
+						<span className='text-gray-400' key={index}>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
