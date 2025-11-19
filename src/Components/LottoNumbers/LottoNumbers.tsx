@@ -27,14 +27,14 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpress
 			<div className='w-full h-[55%] flex flex-wrap justify-center items-center'>
 				{viewBigLottoNumbers.map((item, index) => {
 					return (
-						<span className='text-gray-400' key={index}>
+						<span className='text-gray-400 md:text-[1.4em]' key={index}>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
 				{viewExpressLottoNumbers.map((item, index) => {
 					return (
-						<span className='text-gray-400' key={index}>
+						<span className='text-gray-400 text-[1.4em]' key={index}>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
