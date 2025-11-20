@@ -8,7 +8,7 @@ type ContextProviderProps = {
 type InitialStateType = {
 	bigLottoNumbers: number[]
 	expressLottoNumbers: number[]
-	randomLottoNumbers: number[]
+	randomBigLottoNumbers: number[]
 	handleViewNumbers: (kind: string) => void
 	handleRandomLottoNumbers: () => void
 }
@@ -16,7 +16,7 @@ type InitialStateType = {
 const InitialState: InitialStateType = {
 	bigLottoNumbers: [],
 	expressLottoNumbers: [],
-	randomLottoNumbers: [],
+	randomBigLottoNumbers: [],
 	handleViewNumbers: () => {},
 	handleRandomLottoNumbers: () => {},
 }
@@ -27,7 +27,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const [bigLottoNumbers, setBigLottoNumbers] = useState<number[]>([])
 	const [expressLottoNumbers, setExpressLottoNumbers] = useState<number[]>([])
 
-	const [randomLottoNumbers, setRandomLottoNumbers] = useState<number[]>([])
+	const [randomBigLottoNumbers, setRandomBigLottoNumbers] = useState<number[]>([])
 
 	const handleViewNumbers = (kind: string) => {
 		if (kind === 'bigLotto') {
@@ -59,7 +59,13 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	return (
 		<LottoContext.Provider
-			value={{ bigLottoNumbers, expressLottoNumbers, randomLottoNumbers, handleViewNumbers, handleRandomLottoNumbers }}
+			value={{
+				bigLottoNumbers,
+				expressLottoNumbers,
+				randomBigLottoNumbers,
+				handleViewNumbers,
+				handleRandomLottoNumbers,
+			}}
 		>
 			{children}
 			<Analytics />
