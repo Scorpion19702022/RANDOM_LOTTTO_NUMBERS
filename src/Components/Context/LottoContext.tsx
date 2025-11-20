@@ -10,6 +10,7 @@ type InitialStateType = {
 	expressLottoNumbers: number[]
 	randomLottoNumbers: number[]
 	handleViewNumbers: (kind: string) => void
+	handleRandomLottoNumbers: () => void
 }
 
 const InitialState: InitialStateType = {
@@ -17,6 +18,7 @@ const InitialState: InitialStateType = {
 	expressLottoNumbers: [],
 	randomLottoNumbers: [],
 	handleViewNumbers: () => {},
+	handleRandomLottoNumbers: () => {},
 }
 
 const LottoContext = createContext(InitialState)
@@ -51,8 +53,14 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		}
 	}
 
+	const handleRandomLottoNumbers = () => {
+		console.log('klik')
+	}
+
 	return (
-		<LottoContext.Provider value={{ bigLottoNumbers, expressLottoNumbers, handleViewNumbers }}>
+		<LottoContext.Provider
+			value={{ bigLottoNumbers, expressLottoNumbers, randomLottoNumbers, handleViewNumbers, handleRandomLottoNumbers }}
+		>
 			{children}
 			<Analytics />
 		</LottoContext.Provider>
