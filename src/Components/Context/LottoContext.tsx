@@ -12,6 +12,7 @@ type InitialStateType = {
 	randomExpressLottoNumbers: number[]
 	handleViewNumbers: (kind: string) => void
 	handleRandomLottoNumbers: () => void
+	handleClearAllNumbers: () => void
 }
 
 const InitialState: InitialStateType = {
@@ -21,6 +22,7 @@ const InitialState: InitialStateType = {
 	randomExpressLottoNumbers: [],
 	handleViewNumbers: () => {},
 	handleRandomLottoNumbers: () => {},
+	handleClearAllNumbers: () => {},
 }
 
 const LottoContext = createContext(InitialState)
@@ -57,7 +59,11 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	}
 
 	const handleRandomLottoNumbers = () => {
-		console.log('klik')
+		console.log('losuj')
+	}
+
+	const handleClearAllNumbers = () => {
+		console.log('wyczyść')
 	}
 
 	return (
@@ -69,6 +75,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 				randomExpressLottoNumbers,
 				handleViewNumbers,
 				handleRandomLottoNumbers,
+				handleClearAllNumbers,
 			}}
 		>
 			{children}
