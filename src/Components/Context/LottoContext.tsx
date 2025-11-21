@@ -59,7 +59,12 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	}
 
 	const handleRandomLottoNumbers = () => {
-		console.log('losuj')
+		const random: number[] = []
+		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
+			return
+		} else {
+			console.log('fukcja przeszła')
+		}
 	}
 
 	const handleClearAllNumbers = () => {
