@@ -60,7 +60,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const handleRandomLottoNumbers = () => {
 		const randomBig: number[] = []
-		const randomExpress: number[] = []
+		// const randomExpress: number[] = []
 		if (bigLottoNumbers.length === 0 && expressLottoNumbers.length === 0) {
 			return
 		} else {
@@ -79,17 +79,17 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
 		}
 
-		while (randomExpress.length < 5) {
-			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
+		// while (randomExpress.length < 5) {
+		// 	const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
 
-			const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
+		// 	const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
 
-			if (!randomExpress.includes(drawnExpressRandomNumers)) {
-				randomExpress.push(drawnExpressRandomNumers)
-			}
+		// 	if (!randomExpress.includes(drawnExpressRandomNumers)) {
+		// 		randomExpress.push(drawnExpressRandomNumers)
+		// 	}
 
-			setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
-		}
+		// 	setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
+		// }
 	}
 
 	console.log(randomBigLottoNumbers)
