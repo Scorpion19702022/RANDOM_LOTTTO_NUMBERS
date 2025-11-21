@@ -90,10 +90,9 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 		// 	setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
 		// }
+		console.log(randomBigLottoNumbers)
+		console.log(randomExpressLottoNumbers)
 	}
-
-	console.log(randomBigLottoNumbers)
-	console.log(randomExpressLottoNumbers)
 
 	const handleClearAllNumbers = () => {
 		setBigLottoNumbers([])
