@@ -59,11 +59,17 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	}
 
 	const handleRandomLottoNumbers = () => {
-		const random: number[] = []
+		const randomBig: number[] = []
+		const randomExpress: number[] = []
 		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
 			return
 		} else {
 			console.log('fukcja przeszła')
+		}
+
+		while (randomBig.length < 6 || randomExpress.length < 5) {
+			const radomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
+			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
 		}
 	}
 
