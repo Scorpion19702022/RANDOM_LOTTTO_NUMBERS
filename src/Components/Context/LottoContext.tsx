@@ -60,39 +60,47 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const handleRandomLottoNumbers = () => {
 		const randomBig: number[] = []
-		// const randomExpress: number[] = []
+		const randomExpress: number[] = []
 		if (bigLottoNumbers.length === 0 && expressLottoNumbers.length === 0) {
 			return
 		} else {
 			console.log('fukcja przeszła')
 		}
 
-		while (randomBig.length < 6) {
+		while (randomBig.length < 6 || randomExpress.length < 5) {
 			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
+			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
 
 			const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
+			const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
 
 			if (!randomBig.includes(drawnBigRandomNumbers)) {
 				randomBig.push(drawnBigRandomNumbers)
+			} else if (!randomExpress.includes(drawnExpressRandomNumers)) {
+				randomExpress.push(drawnExpressRandomNumers)
 			}
 
 			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
 		}
 
-		// while (randomExpress.length < 5) {
-		// 	const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
+		while (randomBig.length < 6 || randomExpress.length < 5) {
+			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
+			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
 
-		// 	const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
+			const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
+			const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
 
-		// 	if (!randomExpress.includes(drawnExpressRandomNumers)) {
-		// 		randomExpress.push(drawnExpressRandomNumers)
-		// 	}
+			if (!randomBig.includes(drawnBigRandomNumbers)) {
+				randomBig.push(drawnBigRandomNumbers)
+			} else if (!randomExpress.includes(drawnExpressRandomNumers)) {
+				randomExpress.push(drawnExpressRandomNumers)
+			}
 
-		// 	setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
-		// }
-		console.log(randomBigLottoNumbers)
-		console.log(randomExpressLottoNumbers)
+			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+		}
 	}
+
+	console.log(randomBigLottoNumbers)
 
 	const handleClearAllNumbers = () => {
 		setBigLottoNumbers([])
