@@ -67,6 +67,18 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			console.log('fukcja przeszła')
 		}
 
+		while (randomBig.length < 6 && randomExpress.length === 0) {
+			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
+
+			const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
+
+			if (!randomBig.includes(drawnBigRandomNumbers)) {
+				randomBig.push(drawnBigRandomNumbers)
+			}
+
+			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+		}
+
 		while (randomBig.length < 6 || randomExpress.length < 5) {
 			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
 			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
