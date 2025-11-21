@@ -63,7 +63,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	}
 
 	const handleClearAllNumbers = () => {
-		console.log('wyczyść')
+		setBigLottoNumbers([])
+		setExpressLottoNumbers([])
+		setRandomBigLottoNumbers([])
+		setRandomExpressLottoNumbers([])
 	}
 
 	return (
