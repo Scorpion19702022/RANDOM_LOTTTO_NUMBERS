@@ -79,8 +79,12 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			} else if (!randomExpress.includes(drawnExpressRandomNumers)) {
 				randomExpress.push(drawnExpressRandomNumers)
 			}
+
+			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
 		}
 	}
+
+	console.log(randomBigLottoNumbers)
 
 	const handleClearAllNumbers = () => {
 		setBigLottoNumbers([])
