@@ -60,8 +60,8 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const handleRandomLottoNumbers = () => {
 		const randomBig: number[] = []
-		const randomExpress: number[] = []
-		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
+		// const randomExpress: number[] = []
+		if (bigLottoNumbers.length === 0 && expressLottoNumbers.length === 0) {
 			return
 		} else {
 			console.log('fukcja przeszła')
