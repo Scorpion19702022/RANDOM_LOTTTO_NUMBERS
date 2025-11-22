@@ -95,8 +95,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			}
 
 			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
-
-			return
 		}
 
 		while (randomExpress.length < 5) {
