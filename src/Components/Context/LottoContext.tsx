@@ -58,32 +58,13 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		}
 	}
 
-	const handleRandomLottoNumbers = () => {
+	const handleRandomLottoBigNumbers = () => {
 		const randomBig: number[] = []
-		const randomExpress: number[] = []
-		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
+		if (bigLottoNumbers.length === 0) {
 			return
 		} else {
 			console.log('fukcja przeszła')
 		}
-
-		// while (randomBig.length < 6 || randomExpress.length < 5) {
-		// 	const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
-		// 	const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
-
-		// 	const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
-		// 	const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
-
-		// 	if (!randomBig.includes(drawnBigRandomNumbers)) {
-		// 		randomBig.push(drawnBigRandomNumbers)
-		// 	}
-
-		// 	if (!randomExpress.includes(drawnExpressRandomNumers)) {
-		// 		randomExpress.push(drawnExpressRandomNumers)
-		// 	}
-
-		// 	setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
-		// }
 
 		while (randomBig.length < 6) {
 			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
@@ -96,6 +77,16 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
 		}
+	}
+
+	const handleRadomLottoExpessNumbers = () => {
+		const randomExpress: number[] = []
+
+		if (expressLottoNumbers.length === 0) {
+			return
+		} else {
+			console.log('fukcja przeszła')
+		}
 
 		while (randomExpress.length < 5) {
 			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
@@ -107,6 +98,14 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			}
 
 			setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
+		}
+	}
+
+	const handleRandomLottoNumbers = () => {
+		if (bigLottoNumbers.length !== 0) {
+			handleRandomLottoBigNumbers()
+		} else if (expressLottoNumbers.length !== 0) {
+			handleRadomLottoExpessNumbers()
 		}
 	}
 
