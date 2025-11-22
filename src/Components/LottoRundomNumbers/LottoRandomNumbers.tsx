@@ -26,7 +26,11 @@ const LottoRandomNumbers: React.FC<InitialProps> = ({ isRandomNumbers, randomNum
 			</div>
 			<div className='w-full h-[50%] p-12 flex justify-center items-center'>
 				{isRandomNumbers.map((item, index) => {
-					return <span key={index}>{item}</span>
+					return (
+						<span key={index}>
+							{item}, <span className='opacity-0'>,</span>
+						</span>
+					)
 				})}
 			</div>
 		</section>
