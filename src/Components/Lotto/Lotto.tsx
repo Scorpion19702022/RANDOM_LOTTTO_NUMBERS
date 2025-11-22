@@ -5,8 +5,14 @@ import LottoNumbers from '../LottoNumbers/LottoNumbers'
 import LottoRandomNumbers from '../LottoRundomNumbers/LottoRandomNumbers'
 
 const Lotto = () => {
-	const { bigLottoNumbers, expressLottoNumbers, handleViewNumbers, handleRandomLottoNumbers, handleClearAllNumbers } =
-		useContext(LottoContext)
+	const {
+		bigLottoNumbers,
+		expressLottoNumbers,
+		randomLottoNumbers,
+		handleViewNumbers,
+		handleRandomLottoNumbers,
+		handleClearAllNumbers,
+	} = useContext(LottoContext)
 
 	return (
 		<main className='w-full h-screen bg-gray-700 flex flex-col items-center relative md:justify-around'>
@@ -16,7 +22,11 @@ const Lotto = () => {
 				viewExpressLottoNumbers={expressLottoNumbers}
 				viewNumbers={handleViewNumbers}
 			/>
-			<LottoRandomNumbers randomNumbers={handleRandomLottoNumbers} clearAllNumbers={handleClearAllNumbers} />
+			<LottoRandomNumbers
+				randomNumbers={handleRandomLottoNumbers}
+				isRandomNumbers={randomLottoNumbers}
+				clearAllNumbers={handleClearAllNumbers}
+			/>
 		</main>
 	)
 }
