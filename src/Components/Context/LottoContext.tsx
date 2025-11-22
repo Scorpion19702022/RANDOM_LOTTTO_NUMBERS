@@ -67,26 +67,53 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 			console.log('fukcja przeszła')
 		}
 
-		while (randomBig.length < 6 || randomExpress.length < 5) {
+		// while (randomBig.length < 6 || randomExpress.length < 5) {
+		// 	const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
+		// 	const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
+
+		// 	const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
+		// 	const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
+
+		// 	if (!randomBig.includes(drawnBigRandomNumbers)) {
+		// 		randomBig.push(drawnBigRandomNumbers)
+		// 	}
+
+		// 	if (!randomExpress.includes(drawnExpressRandomNumers)) {
+		// 		randomExpress.push(drawnExpressRandomNumers)
+		// 	}
+
+		// 	setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+		// }
+
+		while (randomBig.length < 6) {
 			const randomIndexBig = Math.floor(Math.random() * bigLottoNumbers.length)
-			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
 
 			const drawnBigRandomNumbers = bigLottoNumbers[randomIndexBig]
-			const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
 
 			if (!randomBig.includes(drawnBigRandomNumbers)) {
 				randomBig.push(drawnBigRandomNumbers)
 			}
 
+			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+
+			return
+		}
+
+		while (randomExpress.length < 5) {
+			const randomIndexExpress = Math.floor(Math.random() * expressLottoNumbers.length)
+
+			const drawnExpressRandomNumers = expressLottoNumbers[randomIndexExpress]
+
 			if (!randomExpress.includes(drawnExpressRandomNumers)) {
 				randomExpress.push(drawnExpressRandomNumers)
 			}
 
-			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+			setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
 		}
 	}
 
 	console.log(randomBigLottoNumbers)
+	console.log(randomExpressLottoNumbers)
 
 	const handleClearAllNumbers = () => {
 		setBigLottoNumbers([])
