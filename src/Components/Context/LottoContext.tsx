@@ -61,7 +61,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const handleRandomLottoNumbers = () => {
 		const randomBig: number[] = []
 		const randomExpress: number[] = []
-		if (bigLottoNumbers.length === 0 && expressLottoNumbers.length === 0) {
+		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
 			return
 		} else {
 			console.log('fukcja przeszła')
@@ -76,7 +76,9 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 			if (!randomBig.includes(drawnBigRandomNumbers)) {
 				randomBig.push(drawnBigRandomNumbers)
-			} else if (!randomExpress.includes(drawnExpressRandomNumers)) {
+			}
+
+			if (!randomExpress.includes(drawnExpressRandomNumers)) {
 				randomExpress.push(drawnExpressRandomNumers)
 			}
 
