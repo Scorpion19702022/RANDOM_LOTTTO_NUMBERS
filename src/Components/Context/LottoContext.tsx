@@ -48,6 +48,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 			setBigLottoNumbers(bigLotto)
 			setExpressLottoNumbers([])
+			setRandomLottoNumbers([])
 		}
 
 		if (kind === 'expressLotto') {
@@ -59,6 +60,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 			setBigLottoNumbers([])
 			setExpressLottoNumbers(expressLotto)
+			setRandomLottoNumbers([])
 		}
 	}
 
