@@ -8,8 +8,9 @@ type ContextProviderProps = {
 type InitialStateType = {
 	bigLottoNumbers: number[]
 	expressLottoNumbers: number[]
-	randomBigLottoNumbers: number[]
-	randomExpressLottoNumbers: number[]
+	// randomBigLottoNumbers: number[]
+	// randomExpressLottoNumbers: number[]
+	randomLottoNumbers: number[]
 	handleViewNumbers: (kind: string) => void
 	handleRandomLottoNumbers: () => void
 	handleClearAllNumbers: () => void
@@ -18,8 +19,9 @@ type InitialStateType = {
 const InitialState: InitialStateType = {
 	bigLottoNumbers: [],
 	expressLottoNumbers: [],
-	randomBigLottoNumbers: [],
-	randomExpressLottoNumbers: [],
+	// randomBigLottoNumbers: [],
+	// randomExpressLottoNumbers: [],
+	randomLottoNumbers: [],
 	handleViewNumbers: () => {},
 	handleRandomLottoNumbers: () => {},
 	handleClearAllNumbers: () => {},
@@ -31,8 +33,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const [bigLottoNumbers, setBigLottoNumbers] = useState<number[]>([])
 	const [expressLottoNumbers, setExpressLottoNumbers] = useState<number[]>([])
 
-	const [randomBigLottoNumbers, setRandomBigLottoNumbers] = useState<number[]>([])
-	const [randomExpressLottoNumbers, setRandomExpressLottoNumbers] = useState<number[]>([])
+	// const [randomBigLottoNumbers, setRandomBigLottoNumbers] = useState<number[]>([])
+	// const [randomExpressLottoNumbers, setRandomExpressLottoNumbers] = useState<number[]>([])
+
+	const [randomLottoNumbers, setRandomLottoNumbers] = useState<number[]>([])
 
 	const handleViewNumbers = (kind: string) => {
 		if (kind === 'bigLotto') {
@@ -75,7 +79,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 				randomBig.push(drawnBigRandomNumbers)
 			}
 
-			setRandomBigLottoNumbers([...randomBig].sort((a, b) => a - b))
+			setRandomLottoNumbers([...randomBig].sort((a, b) => a - b))
 		}
 	}
 
@@ -97,37 +101,34 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 				randomExpress.push(drawnExpressRandomNumers)
 			}
 
-			setRandomExpressLottoNumbers([...randomExpress].sort((a, b) => a - b))
+			setRandomLottoNumbers([...randomExpress].sort((a, b) => a - b))
 		}
 	}
 
 	const handleRandomLottoNumbers = () => {
 		if (bigLottoNumbers.length !== 0) {
-			setRandomExpressLottoNumbers([])
 			handleRandomLottoBigNumbers()
 		} else if (expressLottoNumbers.length !== 0) {
-			setRandomBigLottoNumbers([])
 			handleRadomLottoExpessNumbers()
 		}
 	}
 
-	console.log(randomBigLottoNumbers)
-	console.log(randomExpressLottoNumbers)
-
 	const handleClearAllNumbers = () => {
 		setBigLottoNumbers([])
 		setExpressLottoNumbers([])
-		setRandomBigLottoNumbers([])
-		setRandomExpressLottoNumbers([])
+		setRandomLottoNumbers([])
 	}
+
+	console.log(randomLottoNumbers)
 
 	return (
 		<LottoContext.Provider
 			value={{
 				bigLottoNumbers,
 				expressLottoNumbers,
-				randomBigLottoNumbers,
-				randomExpressLottoNumbers,
+				// randomBigLottoNumbers,
+				// randomExpressLottoNumbers,
+				randomLottoNumbers,
 				handleViewNumbers,
 				handleRandomLottoNumbers,
 				handleClearAllNumbers,
