@@ -103,8 +103,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const handleRandomLottoNumbers = () => {
 		if (bigLottoNumbers.length !== 0) {
+			setExpressLottoNumbers([])
 			handleRandomLottoBigNumbers()
 		} else if (expressLottoNumbers.length !== 0) {
+			setBigLottoNumbers([])
 			handleRadomLottoExpessNumbers()
 		}
 	}
