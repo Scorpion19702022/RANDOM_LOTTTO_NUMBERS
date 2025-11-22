@@ -24,10 +24,10 @@ const LottoRandomNumbers: React.FC<InitialProps> = ({ isRandomNumbers, randomNum
 					{`wyczyść`.toLocaleUpperCase()}
 				</button>
 			</div>
-			<div className='w-full h-[50%] p-12 flex justify-center items-center'>
+			<div className='w-full h-[50%] p-4 flex justify-center items-center'>
 				{isRandomNumbers.map((item, index) => {
 					return (
-						<span key={index}>
+						<span key={index} className=' h-full text-[1.8em]'>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
