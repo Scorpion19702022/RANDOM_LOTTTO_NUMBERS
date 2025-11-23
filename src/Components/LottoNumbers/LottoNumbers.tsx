@@ -38,7 +38,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 					return (
 						<span
 							className={
-								!isRandom ? 'text-[1em] text-gray-400 md:text-[1.6em]' : 'text-[1em] text-cyan-300 md:text-[1.6em]'
+								!isRandom ? 'text-[1em] text-gray-400 md:text-[1.2em]' : 'text-[1em] text-cyan-300 md:text-[1.2em]'
 							}
 							key={index}
 						>
@@ -51,7 +51,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 					return (
 						<span
 							className={
-								!isRandom ? 'text-[1em] text-gray-400 md:text-[1.6em]' : 'text-[1em] text-cyan-300 md:text-[1.6em]'
+								!isRandom ? 'text-[1em] text-gray-400 md:text-[1.2em]' : 'text-[1em] text-cyan-300 md:text-[1.2em]'
 							}
 							key={index}
 						>
