@@ -21,7 +21,7 @@ const Lotto = () => {
 				viewBigLottoNumbers={bigLottoNumbers}
 				viewExpressLottoNumbers={expressLottoNumbers}
 				viewNumbers={handleViewNumbers}
-				randomNumbersBig={randomLottoNumbers}
+				randomNumbers={randomLottoNumbers}
 			/>
 			<LottoRandomNumbers
 				randomNumbers={handleRandomLottoNumbers}

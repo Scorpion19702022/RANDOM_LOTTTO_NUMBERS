@@ -1,7 +1,7 @@
 interface InitialProps {
 	viewBigLottoNumbers: number[]
 	viewExpressLottoNumbers: number[]
-	randomNumbersBig: number[]
+	randomNumbers: number[]
 	// randomNumbersExpress: number[]
 	viewNumbers: (kind: string) => void
 }
@@ -9,7 +9,7 @@ interface InitialProps {
 const LottoNumbers: React.FC<InitialProps> = ({
 	viewBigLottoNumbers,
 	viewExpressLottoNumbers,
-	randomNumbersBig,
+	randomNumbers,
 	// randomNumbersExpress,
 	viewNumbers,
 }) => {
@@ -34,17 +34,15 @@ const LottoNumbers: React.FC<InitialProps> = ({
 			</div>
 			<div className='w-full h-[55%] flex flex-wrap justify-center items-center md:h-[30%]'>
 				{viewBigLottoNumbers.map((item, index) => {
-					const isRandomBig = randomNumbersBig.includes(item)
+					const isRandom = randomNumbers.includes(item)
 					return (
-						<span
-							className={!isRandomBig ? 'text-gray-400 md:text-[1.4em]' : 'text-blue-400 md:text-[1.4em]'}
-							key={index}
-						>
+						<span className={!isRandom ? 'text-gray-400 md:text-[1.4em]' : 'text-blue-400 md:text-[1.4em]'} key={index}>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
 				{viewExpressLottoNumbers.map((item, index) => {
+					const isRandom = randomNumbers
 					return (
 						<span className='text-gray-400 md:text-[1.4em]' key={index}>
 							{item}, <span className='opacity-0'>,</span>
