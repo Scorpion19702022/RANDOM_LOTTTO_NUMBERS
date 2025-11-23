@@ -2,11 +2,17 @@ interface InitialProps {
 	viewBigLottoNumbers: number[]
 	viewExpressLottoNumbers: number[]
 	randomNumbersBig: number[]
-	randomNumbersExpress: number[]
+	// randomNumbersExpress: number[]
 	viewNumbers: (kind: string) => void
 }
 
-const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpressLottoNumbers, randomNumbersBig, randomNumbersExpress, viewNumbers }) => {
+const LottoNumbers: React.FC<InitialProps> = ({
+	viewBigLottoNumbers,
+	viewExpressLottoNumbers,
+	randomNumbersBig,
+	// randomNumbersExpress,
+	viewNumbers,
+}) => {
 	return (
 		<section className='w-[90%] h-[55%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400 md:h-[40%]'>
 			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
@@ -28,9 +34,12 @@ const LottoNumbers: React.FC<InitialProps> = ({ viewBigLottoNumbers, viewExpress
 			</div>
 			<div className='w-full h-[55%] flex flex-wrap justify-center items-center md:h-[30%]'>
 				{viewBigLottoNumbers.map((item, index) => {
-					const isRandomBig = 
+					const isRandomBig = randomNumbersBig.includes(item)
 					return (
-						<span className='text-gray-400 md:text-[1.4em]' key={index}>
+						<span
+							className={isRandomBig ? 'text-gray-400 md:text-[1.4em]' : 'text-blue-400 md:text-[1.4em]'}
+							key={index}
+						>
 							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
