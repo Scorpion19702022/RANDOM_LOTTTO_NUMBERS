@@ -37,7 +37,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 					const isRandomBig = randomNumbersBig.includes(item)
 					return (
 						<span
-							className={isRandomBig ? 'text-gray-400 md:text-[1.4em]' : 'text-blue-400 md:text-[1.4em]'}
+							className={!isRandomBig ? 'text-gray-400 md:text-[1.4em]' : 'text-blue-400 md:text-[1.4em]'}
 							key={index}
 						>
 							{item}, <span className='opacity-0'>,</span>
