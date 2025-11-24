@@ -1,3 +1,5 @@
+import LottoPopupError from '../LottoPopupError/LottoPopupError'
+
 interface InitialProps {
 	isRandomNumbers: number[]
 	randomNumbers: () => void
@@ -6,7 +8,8 @@ interface InitialProps {
 
 const LottoRandomNumbers: React.FC<InitialProps> = ({ isRandomNumbers, randomNumbers, clearAllNumbers }) => {
 	return (
-		<section className='w-[90%] h-[35%] p-[2em] flex flex-col justify-around items-center md:h-[50%] md:justify-between md:pb-24'>
+		<section className='relative w-[90%] h-[35%] p-[2em] flex flex-col justify-around items-center md:h-[50%] md:justify-between md:pb-24'>
+			<LottoPopupError />
 			<h1 className='w-full pb-2 text-center text-gray-300 border-b-2 border-dotted border-b-gray-500 md:w-[50%] md:text-[1.6em]'>
 				{'twoje szczęśliwe liczby'.toLocaleUpperCase()}
 			</h1>
