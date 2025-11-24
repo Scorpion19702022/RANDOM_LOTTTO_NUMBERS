@@ -1,7 +1,7 @@
 const LottoPopupError = () => {
 	return (
 		<section className='absolute w-[70%] h-[50%] bg-gray-950 flex justify-center items-center opacity-100'>
-			<h1 className='text-gray-100'>popup</h1>
+			<h1 className='text-gray-100'>popup error</h1>
 		</section>
 	)
 }
