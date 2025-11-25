@@ -29,7 +29,11 @@ const LottoNumbers: React.FC<InitialProps> = ({
 				</button>
 				<button
 					onClick={() => viewNumbers('expressLotto')}
-					className='w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+					className={
+						viewExpressLottoNumbers.length === 0
+							? 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-gray-800 md:w-[40%] lg:w-[45%] hover:bg-gray-900'
+					}
 				>
 					{`express lotek`.toLocaleUpperCase()}
 				</button>
