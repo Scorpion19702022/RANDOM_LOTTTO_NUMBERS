@@ -32,7 +32,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 					className={
 						viewExpressLottoNumbers.length === 0
 							? 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
-							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-gray-800 md:w-[40%] lg:w-[45%] hover:bg-gray-900'
+							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-cyan-900 md:w-[40%] lg:w-[45%] hover:bg-gray-800 shadow-[0px_0px_18px_1px_cyan]'
 					}
 				>
 					{`express lotek`.toLocaleUpperCase()}
