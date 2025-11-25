@@ -2,7 +2,6 @@ interface InitialProps {
 	viewBigLottoNumbers: number[]
 	viewExpressLottoNumbers: number[]
 	randomNumbers: number[]
-	// randomNumbersExpress: number[]
 	viewNumbers: (kind: string) => void
 }
 
@@ -10,7 +9,6 @@ const LottoNumbers: React.FC<InitialProps> = ({
 	viewBigLottoNumbers,
 	viewExpressLottoNumbers,
 	randomNumbers,
-	// randomNumbersExpress,
 	viewNumbers,
 }) => {
 	return (
@@ -21,7 +19,11 @@ const LottoNumbers: React.FC<InitialProps> = ({
 			<div className='w-full h-[12%] mb-4 flex justify-between md:w-[50%]'>
 				<button
 					onClick={() => viewNumbers('bigLotto')}
-					className='w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+					className={
+						viewBigLottoNumbers.length === 0
+							? 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-gray-800 md:w-[40%] lg:w-[45%] hover:bg-gray-900'
+					}
 				>
 					{`duży lotek`.toLocaleUpperCase()}
 				</button>
