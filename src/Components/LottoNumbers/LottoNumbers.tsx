@@ -13,7 +13,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 }) => {
 	return (
 		<section className='w-[90%] h-[55%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400 md:h-[40%]'>
-			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em]'>
+			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em] '>
 				wybierz losowanie klikając w odpowiedni przycisk i odkryj cyfry
 			</h2>
 			<div className='w-full h-[12%] mb-4 flex justify-between md:w-[50%]'>
@@ -22,7 +22,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 					className={
 						viewBigLottoNumbers.length === 0
 							? 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
-							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-gray-800 md:w-[40%] lg:w-[45%] hover:bg-gray-900'
+							: 'w-[40%] h-full border-2 border-gray-200 text-gray-200 cursor-pointer transition duration-300 bg-gray-800 md:w-[40%] lg:w-[45%] hover:bg-gray-900 '
 					}
 				>
 					{`duży lotek`.toLocaleUpperCase()}
