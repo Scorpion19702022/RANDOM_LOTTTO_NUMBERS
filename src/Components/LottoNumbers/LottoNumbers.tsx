@@ -11,6 +11,8 @@ const LottoNumbers: React.FC<InitialProps> = ({
 	randomNumbers,
 	viewNumbers,
 }) => {
+	console.log(viewBigLottoNumbers)
+
 	return (
 		<section className='w-[90%] h-[55%] flex flex-col justify-between items-center p-[2em] border-b-2 border-gray-400 md:h-[40%]'>
 			<h2 className='w-full h-[35%] flex items-center justify-center text-center text-cyan-200 md:text-[1.4em] '>
@@ -50,7 +52,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 							}
 							key={index}
 						>
-							{item}, <span className='opacity-0'>,</span>
+							{item} {viewBigLottoNumbers[48] && ','} <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
