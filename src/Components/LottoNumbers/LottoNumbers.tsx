@@ -65,7 +65,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 							}
 							key={index}
 						>
-							{item}, <span className='opacity-0'>,</span>
+							{item} {index < viewExpressLottoNumbers.length - 1 ? ',' : ''} <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
