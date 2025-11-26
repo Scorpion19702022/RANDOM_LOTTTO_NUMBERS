@@ -121,8 +121,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		setRandomLottoNumbers([])
 	}
 
-	console.log(randomLottoNumbers)
-
 	return (
 		<LottoContext.Provider
 			value={{

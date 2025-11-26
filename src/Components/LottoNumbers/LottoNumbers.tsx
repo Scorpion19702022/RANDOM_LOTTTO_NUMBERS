@@ -52,7 +52,7 @@ const LottoNumbers: React.FC<InitialProps> = ({
 							}
 							key={index}
 						>
-							{item} {viewBigLottoNumbers[48] && ','} <span className='opacity-0'>,</span>
+							{item}, <span className='opacity-0'>,</span>
 						</span>
 					)
 				})}
