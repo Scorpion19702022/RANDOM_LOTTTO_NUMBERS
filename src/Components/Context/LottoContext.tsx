@@ -71,10 +71,8 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const handleRandomLottoBigNumbers = () => {
 		const randomBig: number[] = []
 		if (bigLottoNumbers.length === 0) {
-			setEmptyLottoNumberList(!setEmptyLottoNumberList)
 			return
 		} else {
-			setEmptyLottoNumberList(!setEmptyLottoNumberList)
 			console.log('fukcja przeszła')
 		}
 
@@ -114,6 +112,12 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	}
 
 	const handleRandomLottoNumbers = () => {
+		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
+			setEmptyLottoNumberList(!emptyLottoNumberList)
+		} else {
+			setEmptyLottoNumberList(true)
+		}
+
 		if (bigLottoNumbers.length !== 0) {
 			handleRandomLottoBigNumbers()
 		} else if (expressLottoNumbers.length !== 0) {
