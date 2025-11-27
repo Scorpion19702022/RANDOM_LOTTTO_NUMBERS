@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 
 type ContextProviderProps = {
@@ -111,8 +111,16 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		}
 	}
 
+	useEffect(() => {
+		if (emptyLottoNumberList) {
+			setInterval(() => {
+				setEmptyLottoNumberList(true)
+			}, 3000)
+		}
+	}, [emptyLottoNumberList])
+
 	const handleRandomLottoNumbers = () => {
-		if (bigLottoNumbers.length === 0 || expressLottoNumbers.length === 0) {
+		if (bigLottoNumbers.length === 0 && expressLottoNumbers.length === 0) {
 			setEmptyLottoNumberList(!emptyLottoNumberList)
 		} else {
 			setEmptyLottoNumberList(true)
