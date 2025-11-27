@@ -11,6 +11,7 @@ type InitialStateType = {
 	// randomBigLottoNumbers: number[]
 	// randomExpressLottoNumbers: number[]
 	randomLottoNumbers: number[]
+	emptyLottoNumberList: boolean
 	handleViewNumbers: (kind: string) => void
 	handleRandomLottoNumbers: () => void
 	handleClearAllNumbers: () => void
@@ -22,6 +23,7 @@ const InitialState: InitialStateType = {
 	// randomBigLottoNumbers: [],
 	// randomExpressLottoNumbers: [],
 	randomLottoNumbers: [],
+	emptyLottoNumberList: false,
 	handleViewNumbers: () => {},
 	handleRandomLottoNumbers: () => {},
 	handleClearAllNumbers: () => {},
@@ -37,6 +39,8 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	// const [randomExpressLottoNumbers, setRandomExpressLottoNumbers] = useState<number[]>([])
 
 	const [randomLottoNumbers, setRandomLottoNumbers] = useState<number[]>([])
+
+	const [emptyLottoNumberList, setEmptyLottoNumberList] = useState<boolean>(false)
 
 	const handleViewNumbers = (kind: string) => {
 		if (kind === 'bigLotto') {
@@ -129,6 +133,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 				// randomBigLottoNumbers,
 				// randomExpressLottoNumbers,
 				randomLottoNumbers,
+				emptyLottoNumberList,
 				handleViewNumbers,
 				handleRandomLottoNumbers,
 				handleClearAllNumbers,
