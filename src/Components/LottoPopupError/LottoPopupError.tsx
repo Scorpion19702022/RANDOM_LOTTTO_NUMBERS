@@ -6,7 +6,7 @@ const LottoPopupError: React.FC<InitialProps> = ({ isEmptyNumber }) => {
 	return (
 		<section
 			className={
-				!isEmptyNumber
+				isEmptyNumber
 					? 'absolute w-full h-[70%] bg-gray-950 border-[0.04em] border-gray-100 flex justify-center items-center shadow-[0px_0px_12px_3px_cyan] lg:w-[70%] invisible'
 					: 'absolute w-full h-[70%] bg-gray-950 border-[0.04em] border-gray-100 flex justify-center items-center shadow-[0px_0px_12px_3px_cyan] lg:w-[70%] visible'
 			}

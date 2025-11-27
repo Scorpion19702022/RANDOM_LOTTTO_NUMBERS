@@ -23,7 +23,7 @@ const InitialState: InitialStateType = {
 	// randomBigLottoNumbers: [],
 	// randomExpressLottoNumbers: [],
 	randomLottoNumbers: [],
-	emptyLottoNumberList: false,
+	emptyLottoNumberList: true,
 	handleViewNumbers: () => {},
 	handleRandomLottoNumbers: () => {},
 	handleClearAllNumbers: () => {},
@@ -40,7 +40,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 
 	const [randomLottoNumbers, setRandomLottoNumbers] = useState<number[]>([])
 
-	const [emptyLottoNumberList, setEmptyLottoNumberList] = useState<boolean>(false)
+	const [emptyLottoNumberList, setEmptyLottoNumberList] = useState<boolean>(true)
 
 	const handleViewNumbers = (kind: string) => {
 		if (kind === 'bigLotto') {
@@ -71,9 +71,10 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const handleRandomLottoBigNumbers = () => {
 		const randomBig: number[] = []
 		if (bigLottoNumbers.length === 0) {
-			setEmptyLottoNumberList(true)
+			setEmptyLottoNumberList(!setEmptyLottoNumberList)
 			return
 		} else {
+			setEmptyLottoNumberList(!setEmptyLottoNumberList)
 			console.log('fukcja przeszła')
 		}
 
@@ -94,7 +95,6 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		const randomExpress: number[] = []
 
 		if (expressLottoNumbers.length === 0) {
-			setEmptyLottoNumberList(true)
 			return
 		} else {
 			console.log('fukcja przeszła')
