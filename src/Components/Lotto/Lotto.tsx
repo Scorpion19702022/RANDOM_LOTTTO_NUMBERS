@@ -9,6 +9,7 @@ const Lotto = () => {
 		bigLottoNumbers,
 		expressLottoNumbers,
 		randomLottoNumbers,
+		emptyLottoNumberList,
 		handleViewNumbers,
 		handleRandomLottoNumbers,
 		handleClearAllNumbers,
@@ -26,6 +27,7 @@ const Lotto = () => {
 			<LottoRandomNumbers
 				randomNumbers={handleRandomLottoNumbers}
 				isRandomNumbers={randomLottoNumbers}
+				isPopup={emptyLottoNumberList}
 				clearAllNumbers={handleClearAllNumbers}
 			/>
 		</main>
