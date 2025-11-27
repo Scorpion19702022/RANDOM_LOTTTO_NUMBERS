@@ -71,6 +71,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 	const handleRandomLottoBigNumbers = () => {
 		const randomBig: number[] = []
 		if (bigLottoNumbers.length === 0) {
+			setEmptyLottoNumberList(true)
 			return
 		} else {
 			console.log('fukcja przeszła')
@@ -93,6 +94,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 		const randomExpress: number[] = []
 
 		if (expressLottoNumbers.length === 0) {
+			setEmptyLottoNumberList(true)
 			return
 		} else {
 			console.log('fukcja przeszła')
