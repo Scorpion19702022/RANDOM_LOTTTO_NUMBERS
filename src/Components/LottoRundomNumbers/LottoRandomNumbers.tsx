@@ -17,13 +17,13 @@ const LottoRandomNumbers: React.FC<InitialProps> = ({ isRandomNumbers, isPopup, 
 			<div className='w-full h-[20%] flex justify-between items-center md:w-[50%] md:h-[11%]'>
 				<button
 					onClick={randomNumbers}
-					className='w-[40%] h-full border-[0.04em] border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+					className='w-[40%] h-full border-[0.04em] border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] md:hover:bg-gray-800'
 				>
 					{`losuj`.toLocaleUpperCase()}
 				</button>
 				<button
 					onClick={clearAllNumbers}
-					className='w-[40%] h-full border-[0.04em] border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] hover:bg-gray-800'
+					className='w-[40%] h-full border-[0.04em] border-gray-200 text-gray-200 cursor-pointer transition duration-300 md:w-[40%] lg:w-[45%] md:hover:bg-gray-800'
 				>
 					{`wyczyść`.toLocaleUpperCase()}
 				</button>
