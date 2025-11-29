@@ -18,13 +18,15 @@ All commands are run from the root of the project, from a terminal:
 
 https://random-lottto-numbers.vercel.app/
 
+<img src="./src/assets/image01.jpg" alt="screen project" width="100%">
+
+# --------------------------------
+
 ### The technology used is:
 
 - React
 - TypeScript
 - Tailwind
-
-<img src="./src/assets/image01.jpg" alt="screen project" width="100%">
 
 ```
 
