@@ -12,6 +12,20 @@ All commands are run from the root of the project, from a terminal:
 
 # --------------------------------
 
+# a mini application for drawing lottery numbers
+
+## live:
+
+https://random-lottto-numbers.vercel.app/
+
+### The technology used is:
+
+- React
+- TypeScript
+- Tailwind
+
+<img src="./src/assets/image01.jpg" alt="screen project" width="100%">
+
 ```
 
 ```
